@@ -4,9 +4,16 @@
   <meta charset="UTF-8">
   <title>Nosotros</title>
   <style>
+    :root {
+      --azul-principal: #4169e1;  /* Azul rey */
+      --azul-claro: #e3e9fd;      /* Fondo claro */
+      --azul-medio: #5a78e0;      /* Para títulos */
+      --azul-profundo: #2f4bb2;   /* Citas y detalles */
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #cfe0f5; /* Azul romántico */
+      background: var(--azul-claro);
       margin: 0;
       padding: 0;
       color: #333;
@@ -15,7 +22,8 @@
     h1 {
       text-align: center;
       padding: 40px 20px 10px;
-      color: #4a5a96;
+      color: var(--azul-principal);
+      font-size: 2.5em;
     }
 
     .section {
@@ -29,7 +37,7 @@
 
     .section:nth-child(even) {
       flex-direction: row-reverse;
-      background-color: #e6effa; /* tono azul claro para alternar */
+      background-color: #f0f4ff;
     }
 
     .image-container, .text-container {
@@ -46,28 +54,38 @@
       width: 70%;
       max-width: 400px;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 20px rgba(65, 105, 225, 0.3);
+      border: 3px solid var(--azul-principal);
     }
 
     .text-container {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
     }
 
     .quote {
-      font-size: 1.4em;
+      font-size: 1.5em;
       font-style: italic;
-      color: #5a6cae; /* Azul suave y amoroso */
+      color: var(--azul-profundo);
       text-align: center;
       padding: 10px;
+    }
+
+    .subquote {
+      font-size: 1em;
+      color: var(--azul-medio);
+      text-align: center;
+      max-width: 80%;
+      margin-top: 5px;
     }
 
     .closing {
       text-align: center;
       padding: 40px 20px;
-      font-size: 1.2em;
-      color: #4a5a96;
+      font-size: 1.4em;
+      color: var(--azul-principal);
     }
   </style>
 </head>
@@ -76,10 +94,11 @@
 
   <div class="section">
     <div class="image-container">
-      <img src="nosotrossssssssssssssssss/foto1.jpeg" alt="Nosotros">
+      <img src="foto1.jpeg" alt="Nosotros">
     </div>
     <div class="text-container">
       <div class="quote">"Contigo aprendí lo que es el amor verdadero."</div>
+      <p class="subquote">Y cada día que paso a tu lado me confirma que no hay nada más hermoso que amarte.</p>
     </div>
   </div>
 
@@ -89,6 +108,7 @@
     </div>
     <div class="text-container">
       <div class="quote">"Nuestro amor es mi lugar favorito."</div>
+      <p class="subquote">No importa dónde estemos, si estamos juntos, estoy en casa.</p>
     </div>
   </div>
 
@@ -101,6 +121,7 @@
     </div>
     <div class="text-container">
       <div class="quote">"Cada día contigo es una nueva aventura."</div>
+      <p class="subquote">Gracias por llenar mi vida de momentos inolvidables, sonrisas y amor sin medida.</p>
     </div>
   </div>
 
