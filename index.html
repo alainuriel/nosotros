@@ -5,25 +5,37 @@
   <title>Nosotros</title>
   <style>
     :root {
-      --azul-principal: #4169e1;  /* Azul rey */
-      --azul-claro: #e3e9fd;      /* Fondo claro */
-      --azul-medio: #5a78e0;      /* Para títulos */
-      --azul-profundo: #2f4bb2;   /* Citas y detalles */
+      --azul-principal: #4169e1;  /* Azul Rey */
+      --azul-claro: #e3e9fd;
+      --azul-medio: #5a78e0;
+      --azul-profundo: #2f4bb2;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: var(--azul-claro);
+      background: linear-gradient(to bottom, var(--azul-claro), white);
       margin: 0;
       padding: 0;
       color: #333;
+      animation: fadeIn 2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
     h1 {
       text-align: center;
       padding: 40px 20px 10px;
       color: var(--azul-principal);
-      font-size: 2.5em;
+      font-size: 3em;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
     }
 
     .section {
@@ -31,13 +43,14 @@
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      padding: 50px 10%;
+      padding: 60px 10%;
       flex-wrap: wrap;
+      transition: background 0.5s;
     }
 
     .section:nth-child(even) {
       flex-direction: row-reverse;
-      background-color: #f0f4ff;
+      background: #f0f4ff;
     }
 
     .image-container, .text-container {
@@ -49,43 +62,49 @@
       align-items: center;
     }
 
-    .image-container img,
-    .image-container video {
-      width: 70%;
+    .image-container img {
+      width: 80%;
       max-width: 400px;
-      border-radius: 15px;
-      box-shadow: 0 4px 20px rgba(65, 105, 225, 0.3);
-      border: 3px solid var(--azul-principal);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(65, 105, 225, 0.3);
+      border: 4px solid var(--azul-principal);
+      transition: transform 0.4s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.05);
     }
 
     .text-container {
-      display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      text-align: center;
     }
 
     .quote {
-      font-size: 1.5em;
+      font-size: 1.6em;
       font-style: italic;
       color: var(--azul-profundo);
-      text-align: center;
-      padding: 10px;
+      padding: 15px;
+      background-color: #ffffffaa;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-bottom: 10px;
     }
 
     .subquote {
       font-size: 1em;
       color: var(--azul-medio);
-      text-align: center;
       max-width: 80%;
-      margin-top: 5px;
     }
 
     .closing {
       text-align: center;
-      padding: 40px 20px;
-      font-size: 1.4em;
+      padding: 50px 20px;
+      font-size: 1.5em;
       color: var(--azul-principal);
+      background: linear-gradient(to right, var(--azul-principal), var(--azul-medio));
+      color: white;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -94,17 +113,13 @@
 
   <div class="section">
     <div class="image-container">
-   <img src="https://raw.githubusercontent.com/alainuriel/nosotros/main/foto1.jpeg" alt="Nosotros">
+      <img src="https://raw.githubusercontent.com/alainuriel/nosotros/main/foto1.jpeg" alt="Nosotros">
     </div>
     <div class="text-container">
-      <div class="quote">Quiero amarte siempre.
-Desde que llegaste a mi vida, he sido la persona más feliz.
-Contigo aprendí que el amor verdadero no solo se siente, sino que se construye y se cuida cada día.
-Quiero estar contigo en cada día que pase, realmente quiero compartir mi vida contigo.
-Quiero verte cumplir todo lo que deseas y
-yo deseo un millón de días a tu lado.
-No quiero un “para siempre” vacío, sino uno lleno de momentos reales, perfecos o imperfectos es por eso que me esforzaré para estar contigo lo que resta de mis días.
-Mi lugar favorito siempre será a tu lado.</div>
+      <div class="quote">
+        Quiero amarte siempre. Desde que llegaste a mi vida, he sido la persona más feliz. Contigo aprendí que el amor verdadero no solo se siente, sino que se construye y se cuida cada día.
+        Quiero estar contigo en cada momento. Quiero verte cumplir tus sueños y yo deseo un millón de días a tu lado. Me esforzaré por darte un para siempre lleno de momentos reales. Mi lugar favorito siempre será a tu lado.
+      </div>
       <p class="subquote">Y cada día que paso a tu lado me confirma que no hay nada más hermoso que amarte.</p>
     </div>
   </div>
@@ -114,39 +129,32 @@ Mi lugar favorito siempre será a tu lado.</div>
       <img src="https://raw.githubusercontent.com/alainuriel/nosotros/main/foto3.jpeg" alt="Recuerdo especial">
     </div>
     <div class="text-container">
-      <div class="quote"> Gracias por tanto, amor mío.
-Estoy infinitamente agradecido por todo lo que haces por mí,
-por tu paciencia, por creer en mí incluso cuando yo dudo,
-por estar conmigo y darme lo mejor a pesar de todo.
-Gracias por enseñarme lo que es amar de verdad.
-Me siento muy afortunado por tenerte en mi vida, GRACIAS POR TODO.</div>
+      <div class="quote">
+        Gracias por tanto, amor mío. Estoy infinitamente agradecido por todo lo que haces por mí, por tu paciencia, por creer en mí incluso cuando yo dudo, por estar conmigo y darme lo mejor. Gracias por enseñarme a amar de verdad.
+      </div>
       <p class="subquote">Eres lo más hermoso que ha llegado a mi vida.</p>
     </div>
   </div>
 
   <div class="section">
     <div class="image-container">
-      <img src="https://raw.githubusercontent.com/alainuriel/nosotros/main/foto4.jpeg" alt="Eres mi lugar feliz">
+      <img src="https://raw.githubusercontent.com/alainuriel/nosotros/main/foto4.jpeg" alt="Futuro contigo">
     </div>
     <div class="text-container">
-      <div class="quote">Contigo lo quiero todo.Quiero un futuro contigo, quiero formar una familia contigo, siempre me ha encantado pensar
-         con mucha seguridad lo que ambos queremos, siempre me parecio algo hermoso planear todo. Aunque seamos jovenes y no conozcamos mucho quiero conocerlo 
-         todo contigo. Ya no quiero estar con nadie más, contigo tengo todo lo que nunca pedí pero que siempre deseé, me alegra que la vida nos haya cruzado 
-         y me alegra haber pasado tantas cosas juntos, sean cosas positivas o negativas siempre hemos podido superar todo y creo que eso demuestra el tipo 
-         de pareja que somos, todo el amor que nos tenemos y aunque ya llevemos más de un año y cinco meses juntos no he parado de enamorarme de ti, y quiero que sepas que
-          cada momento que paso contigo es un gran regalo de Dios. 
-
+      <div class="quote">
+        Contigo lo quiero todo. Formar una familia, construir un futuro, reír y aprender juntos. A pesar de la juventud y los retos, sé que todo lo quiero vivir contigo. Cada momento contigo es un regalo y nuestro amor supera cualquier obstáculo.
       </div>
       <p class="subquote">Gracias por llenar mi vida de momentos inolvidables, sonrisas y amor sin medida.</p>
     </div>
   </div>
+
   <div class="section">
     <div class="image-container">
-      <img src="https://raw.githubusercontent.com/alainuriel/nosotros/main/foto8.jpeg" alt="Eres mi lugar feliz">
+      <img src="https://raw.githubusercontent.com/alainuriel/nosotros/main/foto8.jpeg" alt="Amor eterno">
     </div>
     <div class="text-container">
-      <div class="quote">Aún tengo mucho que aprender sobre el amor, pero quiero aprenderlo contigo, aún tengo muchos defectos, pero quiero corregirlos por nosotros
-         dos, aun quedan muchas coas por vivir, y quiero vivirlas contigo.
+      <div class="quote">
+        Aún tengo mucho que aprender sobre el amor, pero quiero aprenderlo contigo. Aún tengo defectos, pero quiero mejorarlos por nosotros. Aún hay mucho por vivir, y quiero vivirlo contigo.
       </div>
       <p class="subquote">Te amo hoy, mañana y siempre te amaré.</p>
     </div>
